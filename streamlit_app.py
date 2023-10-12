@@ -13,5 +13,6 @@ st.text('🐔 Hard-Boiled Free-Range Egg')
 st.text('🥑🍞 Avocado Toast')
 
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-st.multiselect("Pick some fruits:",list(my_fruit_list.index))
+fruits_selected = st.multiselect("Pick some fruits:",list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(my_fruit_list)
